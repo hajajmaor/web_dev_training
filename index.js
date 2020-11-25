@@ -1,18 +1,20 @@
 function OnFormSubmit(data) {
-    // console.log("data:" + data.elements);
-    var formData = data.elements;
-    console.log(formData);
-    for (var ele in formData) {
-        console.log(ele);
+    try {
+        var formData = data.elements;
+        // console.log(formData);
+        var fname = formData.namedItem("fname");
+        if (fname.value != null && fname.value != "") {
+            console.log(fname.value);
+            var result = document.getElementById("result");
+            result.innerHTML = fname.value;
+            window.alert("Hello " + fname.value);
+        }
+        else {
+            window.alert("enter name");
+            fname.focus();
+        }
     }
-    var result = document.getElementById("result");
-    // result.innerText = data.values;
-    // console.log(data["name"]);
-    var name = document.getElementById("fname");
-    result.innerHTML = name.value;
-    console.log(name);
-    if (name.value != null)
-        window.alert("Hello " + name.value);
-    else
-        window.alert("enter name");
+    catch (err) {
+        document.getElementById("result").innerHTML = err.message;
+    }
 }
