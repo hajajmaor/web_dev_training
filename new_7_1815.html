@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: rgb(69, 198, 198);
+        }
+
+        h4 {
+            color: red;
+        }
+
+        div {
+            border: 2px double green;
+            margin: 3px;
+            padding: 4px;
+        }
+
+        legend {
+            font-size: 17px;
+            color: magenta;
+        }
+
+        fieldset {
+            border: 2px double brown;
+            margin: 4px;
+            padding: 4px;
+            background-color: rgb(132, 203, 26);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fruit form</title>
+</head>
+
+<body>
+    <h3>Big Headline</h3>
+    <h4>Required with an *</h4>
+
+
+
+    <form action="#" method="get">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" required=" " name="name">
+            <!-- <label for="name">*</label> -->
+            *
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" required=" " id="email">
+            *
+        </div>
+        <div>
+            comment:
+            <textarea name="comment" id="comment" cols="40" rows="3"></textarea>
+        </div>
+        <div>
+            <select name="fruit" id="fruit">
+                <optgroup>
+                    <option value="banana">banana</option>
+                    <option value="cherry">cherry</option>
+
+                </optgroup>
+            </select>
+        </div>
+        <fieldset>
+            <legend>How do you ??????</legend>
+            <input type="checkbox" name="check1" id="check1">stam1
+            <input type="checkbox" name="check1" id="check2">stam2
+
+            <!-- ------------- -->
+            <input type="radio" name="feelings" id="love">Love
+            <input type="radio" name="feelings" id="hate">hate
+        </fieldset>
+        <input type="submit" value="Send Message">
+        <input type="reset" value="Reset">
+
+    </form>
+
+
+
+</body>
+
+</html>

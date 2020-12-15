@@ -22,8 +22,9 @@
                 placeholder="Enter Name">
 
         </div>
+        <label for="gender" class="font-weight-bold">Gender</label>
         <div class="form-check">
-            <input class="form-check-input " type="radio" name="gender" id="Male">
+            <input class="form-check-input" type="radio" name="gender" id="Male">
             <label class="form-check-label font-weight-bold" for="Male">
                 Male </label>
         </div>
@@ -31,7 +32,8 @@
             <input class="form-check-input" type="radio" name="gender" id="Female">
             <label class="form-check-label font-weight-bold" for="Female">
                 Female </label>
-        </div><br>
+        </div>
+        <br>
 
         <div class="form-group">
             <label for="exampleInputEmail1" class="font-weight-bold">Email</label>
@@ -52,13 +54,12 @@
         <!-- https://mdbootstrap.com/docs/jquery/forms/select/ -->
         <div class="form-group">
             <label for="Reason" class="font-weight-bold">Contact Reason</label>
-            <select class="form-control" id="Reason">
+            <select class="form-control" name="reason" id="reason">
                 <option selected disabled>-- SELECT AN OPTION --</option>
-
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
             </select>
 
         </div>
@@ -75,6 +76,9 @@
         <button type="reset" class="btn btn-danger">Reset</button>
     </form>
 
+    <script>
+        // ניקח את הערך של הצ׳ק בוקס ונבדוק שהוא אמת
+    </script>
 </body>
 
 </html>
