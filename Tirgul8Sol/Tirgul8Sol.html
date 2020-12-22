@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Generator" content="EditPlus®" />
+    <meta name="Author" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <title>Document</title>
+    <script>
+      //Ex.1
+      // window.alert("Hello world!");
+      //Ex.2
+      var person = window.prompt("Please enter your name", "Write here");
+      if (person == null) {
+        document.write("You pressed cancel.");
+      } else {
+        document.write("Hello, " + person + "<br>");
+      }
+      //Ex.3
+      var first = parseInt(
+        window.prompt("Please enter the first number", "Write here")
+      );
+      var second = parseInt(
+        window.prompt("Please enter the second number", "Write here")
+      );
+      var operator = window.prompt(
+        "Please enter the operator (+,-,* or /):",
+        "Write here"
+      );
+      if (operator == "+") {
+        document.write(
+          first + operator + second + "=" + (first + second) + "<br>"
+        );
+      } else if (operator == "-") {
+        document.write(
+          first + operator + second + "=" + (first - second) + "<br>"
+        );
+      } else if (operator == "*") {
+        document.write(
+          first + operator + second + "=" + first * second + "<br>"
+        );
+      } else if (operator == "/") {
+        document.write(
+          first + operator + second + "=" + first / second + "<br>"
+        );
+      } else {
+        document.write("You've entered another thing.<br>");
+      }
+      //Ex.4
+      var i = 1;
+      while (i <= 30) {
+        document.write(i + ",");
+        i++;
+      }
+      document.write("<br>");
+      //Ex.5
+      i = 1;
+      while (i <= 30) {
+        document.write(i + "<br>");
+        i++;
+      }
+      //Ex.6
+      var sum = 0;
+      var count = 0;
+      var num = parseInt(window.prompt("Please enter numbers, to end enter 0"));
+      while (num != 0) {
+        count++;
+        sum += num;
+        num = parseInt(window.prompt("Please enter numbers, to end enter 0"));
+      }
+      document.write(
+        "You've entered " +
+          count +
+          " numbers. Their sum is:" +
+          sum +
+          ", and their average is:" +
+          sum / count +
+          ".<br>"
+      );
+      //Ex.7
+      var fact = 1,
+        i = 1;
+      var number = parseInt(window.prompt("Please enter a number"));
+      while (number >= i) {
+        fact *= i;
+        i++;
+      }
+      document.write(number + "!=" + fact + "<br>");
+      //Ex.8
+      var base = parseInt(window.prompt("Please enter the base", "Write here"));
+      var power = parseInt(
+        window.prompt("Please enter the power", "Write here")
+      );
+      var res = 1,
+        i = 1;
+      while (power >= i) {
+        res *= base;
+        i++;
+      }
+      document.write(base + "^" + power + "=" + res + ".<br>");
+    </script>
+
+    <meta
+      name="NetsparkQuiltingResult"
+      total-length="3197"
+      removed="0"
+      rules-found="w3055,w3870,w2310,w2232"
+    />
+  </head>
+  <body>
+    <script type="text/javascript">
+      var netspark_charset = "utf8";
+      var qJsHost =
+        "https:" == document.location.protocol ? "https://" : "http://";
+      document.write(
+        unescape(
+          "%3Cscript src='/jsQuilting/server/jsDict_utf8.js?v=1&k=23898278c1850f536d688db3614128a0' type='text/javascript'%3E%3C/script%3E"
+        )
+      );
+    </script>
+    <script type="text/javascript">
+      var ntsp_block_page =
+        "http://safepage.neto.net.il/?a=block/block1&level=-15&url=http%3A%2F%2Fdoc-04-28-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F677vj11qk1odcukaq4o5b4e2nok9d082%2Fmnmdrv6gg3pluvca30obak7doak4h7ir%2F1545364800000%2F15743953353126269056%2F15743953353126269056%2F1uXuABfTvvuWumYQdcK383nxG9OnRJdeZ%3Fe%3Ddownload%26nonce%3Df3hvgf2ckl02c%26user%3D15743953353126269056%26hash%3D9adva7sm5ornh9k7s18i0qj34snbq83c&cause=Quiltingjs&user_id=398340&startm=201609";
+      var ntsp_url_level = 40;
+      var ntsp_user_level = -15;
+    </script>
+  </body>
+</html>

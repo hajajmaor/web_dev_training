@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <script>
+function ageCalculation(){
+  var name=prompt("Enter your name:","Your name here");
+  var age=prompt("Enter your age:","0");
+   document.write("Hello, "+name+". You are "+age*365+" days old.");
+
+}
+    function tableCreate(){
+  document.write("<table border=1>");
+  var trs=parseInt(window.prompt("How many rows:",""));
+  var tds=parseInt(window.prompt("How many cols:",""));
+  var i=1, j=1;
+  while(trs>=i){
+	    document.write("<tr>");
+		while(tds>=j){
+           document.write("<td>row no."+i+", col no."+j+"</td>");
+		   j++;
+		}
+		j=1;
+	    document.write("</tr>");
+        i++;
+  }
+    document.write("</table>");
+  document.write("<style>table{background-color:lightblue;} tr{color:blue;}</style>");
+  }
+  function alertMinMax(){
+	var max=Number.MAX_VALUE;
+	var min=Number.MIN_VALUE;
+
+    alert("Min="+min+" Max="+max);
+  }
+  function substringSearch(){
+	 var count=0;
+    var str=window.prompt("Enter your string:");
+    var sub=window.prompt("Enter your substring:");
+    for (var i=0;i<str.length;i++)
+    {
+		if(str.substring(i, i+sub.length).localeCompare(sub)==0)
+		 count++;
+    }
+    alert("The substring appears "+count+" times");
+  }
+  function arrayBalance(){
+	var size=parseInt(window.prompt("How many numbers?",""));
+	var arr=new Array(size);
+	var countNegs=0, countPoss=0;
+    for (var i=0;i<arr.length ; i++)
+    {
+        arr[i]=parseInt(window.prompt("Enter number "+(i+1)+":",""));
+		if(arr[i]<0)
+		   countNegs++;
+		if(arr[i]>0)
+		   countPoss++;
+    }
+	if (countNegs>countPoss)
+	{
+       alert("There are more negative numbers.");
+	}
+	else if (countNegs<countPoss)
+	{
+		alert("There are more positive numbers.");
+	}
+	else{
+		alert("Equal number of positive and negative numbers.");
+
+	}
+    
+  }
+  function changeP(){
+  document.getElementById("ppp").innerHTML="<b>TA DA!</b>";
+  document.getElementById("ppp").style.color="red";
+  }
+  </script>
+  <title>Document</title>
+ 
+<meta name="NetsparkQuiltingResult" total-length="3335" removed="0" rules-found="w3085,w4785,w2709,w2304" />
+</head>
+ <body>
+ <center><br>
+  <p id="ppp">This is p, it is going to change!</p>
+   <button onClick="tableCreate()">press here to create table</button> <br><br>
+   <button onClick="alertMinMax()">press here to see MinMax</button> <br><br>
+   <button onClick="ageCalculation()">press here to calculate your age in days</button><br><br>
+   <button onClick="substringSearch()">press here to count substrings</button> <br><br>
+    <button onClick="arrayBalance()">press here to find array balance</button> <br><br>
+	<button onClick="changeP()">press here to change p</button> <br><br>
+</center>
+ <input type='hidden' name='ntsp_url_level' value='40'/><input type='hidden' name='ntsp_user_level' value='-30'/><input type='hidden' name='ntsp_block_page' value='http://safepage.neto.net.il/?a=block/block1&level=-30&url=http%3A%2F%2Fdoc-14-28-docs.googleusercontent.com%2Fdocs%2Fsecuresc%2F677vj11qk1odcukaq4o5b4e2nok9d082%2Fsnd7oeteriu7a978409q1kfcnk6g30nk%2F1589974125000%2F15743953353126269056%2F15743953353126269056%2F1urWI3WaQPGPugT94ZITluescItS5P4XH%3Fe%3Ddownload%26authuser%3D0&cause=Quiltingjs&user_id=398340&startm=201908'/><script src='/jsQuilting/server/jsDict_utf8.js?v=1&k=23898278c1850f536d688db3614128a0' type='text/javascript' defer></script></body>
+</html>
