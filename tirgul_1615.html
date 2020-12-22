@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Session 8</title>
+  </head>
+  <body>
+    <!-- אם רוצים לכתוב את הקוד בקובץ JS משלו -->
+    <!-- <script src="app.js"></script> -->
+    <script>
+      /*
+        //Ex.2
+      var name = window.prompt("enter name:");
+      document.write("Hello, " + name);
+      */
+      /*
+      //Ex.3
+      var num1 = parseInt(window.prompt("enter 1st number:"));
+      var num2 = parseInt(window.prompt("enter 2nd number:"));
+      var operator = window.prompt("enter operator: (+,-,*,/)");
+      switch (operator) {
+        case "-":
+          document.write(num1 + operator + num2 + "=" + (num1 - num2));
+          break;
+        case "*":
+          document.write(num1 + operator + num2 + "=" + num1 * num2);
+          break;
+        case "/":
+          if (num2 != 0) {
+            document.write(num1 + operator + num2 + "=" + num1 / num2);
+          } else {
+            window.alert("num2 is 0 - avoid Zero Division Error");
+          }
+          break;
+        default:
+          // by default we do a +
+          document.write(num1 + "+" + num2 + "=" + (num1 + num2));
+      }
+      */
+      /*
+        // Code written by Din for ex.3
+        num1 = window.prompt("enter num");
+        num2 = window.prompt("enter num");
+        operator = window.prompt("enter operator");
+        window.alert(eval(num1 + operator + num2));
+        */
+      /*
+      // Ex.4
+      var i = 1;
+      while (i <= 30) {
+        document.write(i + ",");
+        i++;
+      }
+      */
+      /*
+      // Ex.5
+      var i = 1;
+      while (i <= 30) {
+        document.write(i + "<br>");
+        i++;
+      }
+      */
+      /*
+      //Ex.6
+      var counter = 0;
+      //בכוונה לא היה פה VAR!!!!!
+      var sum = 0;
+
+      var num = parseInt(window.prompt("enter a number:"));
+      */
+      /*
+      כל עוד המספר שונה מ0:
+        1. סוכם אותו למשתנה SUM
+        2. counter ++
+        3. קולט מספר חדש
+      */
+      /*
+      //Ex.6 code by Eden
+      var num = parseInt(window.prompt("enter a number"));
+      var sum = 0;
+      var count = 0;
+      while (num != 0) {
+        sum += num;
+        count += 1;
+        var num = parseInt(window.prompt("enter a number"));
+      }
+
+      document.write(
+        "The count is: " +
+          count +
+          ", The sum is: " +
+          sum +
+          ", and the average is: " +
+          sum / count
+      );
+      */
+      /*
+      // Ex.7
+      var number = window.prompt("enter a number:");
+      var sum = 1;
+      for (var i = 2; i <= number; i++) {
+        sum *= i;
+      }
+      document.write(number + "!=" + sum);
+      */
+      // Ex.8
+
+      var num1 = window.prompt("enter num");
+      var num2 = window.prompt("enter num");
+      var sum = num1;
+      for (var i = 2; i <= num2; i++) {
+        sum *= num1;
+      }
+      document.write(num1 + "^" + num2 + "=" + sum + "<br>");
+      document.write(num1 + "^" + num2 + "=" + Math.pow(num1, num2));
+    </script>
+  </body>
+</html>
