@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Session 9 - 16:15</title>
+    <style>
+      #ex1 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <center>
+        <p id="ex1">Text to Change</p>
+        <button onClick="changePByID()">EX.1 Chane P</button>
+        <br /><br />
+        <button onClick="alertMinMax()">EX.2 raise alarm</button>
+        <br /><br />
+
+        <form action="#" onsubmit="ageCalculation(this)">
+          Age: <input type="number" id="age" />
+          <p id="ageResult"></p>
+          <button type="submit">Submit</button>
+        </form>
+      </center>
+    </div>
+    <hr />
+    <div>
+      <center>
+        <form action="#" onsubmit="substringSearch(this)">
+          <label for="string">
+            String: <input type="text" name="string" id="string" /> </label
+          ><br /><br />
+          <label for="subString">
+            substring to search:
+            <input type="text" name="subString" id="subString" />
+          </label>
+          <br /><br />
+          <button type="submit">Search subString</button>
+          <p id="subStringResult"></p>
+        </form>
+      </center>
+    </div>
+    <script>
+      // function ex.1
+      function changePByID() {
+        var pElement = document.getElementById("ex1");
+        pElement.innerHTML = "<b>Hello P</b>";
+        pElement.style.color = "red";
+      }
+
+      // ex2
+      function alertMinMax() {
+        var min = Number.MIN_VALUE;
+        var max = Number.MAX_VALUE;
+        alert("min: " + min + ", max: " + max);
+      }
+      //ex3
+      function ageCalculation() {
+        var age = document.getElementById("age").value;
+        var result = document.getElementById("ageResult");
+        if (age < 1) result.innerHTML = "Hello, fetus!";
+        else if (age < 0) result.innerHTML = "Enter positive number";
+        else if (age >= 120) result.innerHTML = "Hello, Methushelach";
+        else result.innerHTML = "Your age in days: " + age * 365;
+      }
+      //ex4
+      function substringSearch() {
+        var str = document.getElementById("string").value;
+        var subString = document.getElementById("subString").value;
+        var result = document.getElementById("subStringResult");
+        if (str.includes(subString)) {
+          var counter = 0;
+          do {
+            var index = str.indexOf(subString);
+            counter++;
+            str = str.substring(index + subString.length);
+          } while (str.includes(subString));
+          result.innerHTML = "subString found: " + counter + " times";
+          /*
+            מחפש אם תת המחרוזת קיימת במחרוזת.
+            אם כן, מתחילים למנות את הכמות.
+                נאפס מונה
+                נחפש את האינדקס
+                נוסיף 1 למונה
+                נחתוך את המחרוזת המקורית
+                repeat
+            */
+        } else result.innerHTML = "subString not found";
+      }
+      // ex4
+      function arrayBalance() {
+        var size = parseInt(prompt("Enter array size:"));
+        var array = new Array(size);
+
+        for (var i = 0; i < size; i++) {
+          array[i] = parseInt(prompt("Enter a number"));
+        }
+      }
+    </script>
+  </body>
+</html>
