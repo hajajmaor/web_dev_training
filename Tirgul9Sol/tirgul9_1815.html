@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Session 9</title>
+</head>
+
+<body>
+    <center>
+        <div>
+            <h4>Ex.1</h4>
+            <p id="pToChange">Text to Change</p>
+            <button onClick="changeP()">Change P</button>
+        </div>
+        <hr />
+        <div>
+            <h4>Ex.2</h4>
+            <button onClick="alertMinMax()">Show min Max value</button>
+        </div>
+        <hr />
+        <div>
+            <h4>Ex.3</h4>
+            <form action="#" onsubmit="ageCalculation()">
+                <label for="Name">Name:
+                    <input type="text" name="Name" id="name" />
+                </label>
+                <br /><br />
+                <label for="age">age:
+                    <input type="text" name="age" id="age" />
+                </label>
+                <br /><br />
+                <p id="ageResult">
+                    Hello
+                </p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <hr>
+        <div>
+            <h4>Ex.4</h4>
+            <form action="#" onsubmit="substringSearch()">
+                <label for="str">Original String
+                    <input type="text" name="str" id="str">
+                </label><br><br>
+                <label for="subStr">sub string
+                    <input type="text" name="subStr" id="subStr">
+                </label>
+                <p id="subStringResult"></p>
+                <button type="submit">Search Sub String</button>
+            </form>
+        </div>
+    </center>
+    <script>
+        function substringSearch() {
+            /*
+                בדיקה אם תת מחרוזת קיימת בעזרת includes  
+                אם לא קיימת -> נדפיס לא קיים
+                אחרת
+                    מונה ++
+                    נמצא את האינדקס
+                    נבדוק אם תת המחרוזת
+            */
+            var original = document.getElementById("str").value;
+            var subStr = document.getElementById("subStr").value;
+            var pResult = document.getElementById("subStringResult");
+            if (original.includes(subStr)) {
+                // True
+                // for (var i = 0; i < original.length; i++) 
+                // origianl= "ABCDABCDABCDABCDABCD"
+                //subSTR="AB"
+                var count = 0;
+                // var index = original.indexOf(subStr)
+                do {
+                    count++;
+                    var index = original.indexOf(subStr);
+                    original = original.substring(index + subStr.length);
+                    //index = original.indexOf(subStr, index + subStr.length)
+                } while (original.includes(subStr));
+                console.log(count);
+                pResult.innerHTML = "Substring found " + count + " times";
+
+            }
+            else {
+                //false
+                pResult.innerHTML = "Substring not found on the origianl string;";
+            }
+        }
+        function ageCalculation() {
+            document.get
+            var age = parseFloat(document.getElementById("age").value);
+            var name = document.getElementById("name").value;
+            var pResult = document.getElementById("ageResult");
+            if (age <= 0) {
+                pResult.innerHTML = "<h2>Please enter a valid age</h2>";
+            }
+            else if (age > 0 && age < 1) {
+                pResult.innerHTML = "Hello, fetus!";
+            } else if (age < 120) {
+                pResult.innerHTML = "Hello, " + name + ",<br>your age in days is:" + (age * 365);
+            }
+            else {
+                pResult.innerHTML = "Hello, Methushelach!";
+            }
+        }
+        function changeP() {
+            pElement = document.getElementById("pToChange");
+            pElement.innerHTML = "<b>Changed!!!</b>";
+            pElement.style.color = "red";
+        }
+        function alertMinMax() {
+            alert("min= " + Number.MIN_VALUE + ", max=" + Number.MAX_VALUE);
+        }
+    </script>
+</body>
+
+</html>
