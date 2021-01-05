@@ -3,34 +3,7 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#bt").click(function () {
-                $("p").hide();
 
-            });
-            $("#btn").click(function () {
-                $("p").show();
-
-            });
-            $(".b").click(function () {
-                $("#div1").fadeIn();
-                $("#div2").fadeIn("slow");
-                $("#div3").fadeIn(3000);
-                $("h2").css("background-color", "yellow");
-            });
-            $("#btn1").click(function () {
-                alert("Text: " + $("#test").text());
-            });
-            $("#btn3").click(function () {
-                $("#b3").append(" <b>Appended text</b><br>.");
-            });
-
-            $("#btn4").click(function () {
-                $("ol").append("<li>Appended item</li>");
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -64,6 +37,37 @@
     <button id="btn3">Append text</button>
     <button id="btn4">Append list items</button>
     <div id="b3">Nadav Voloch</div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            $("#bt").click(function () {
+                $("p").hide();
+
+            });
+            $("#btn").click(function () {
+                $("p").show();
+
+            });
+            $(".b").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+                $("h2").css("background-color", "yellow");
+            });
+            $("#btn1").click(function () {
+                alert("Text: " + $("#test").text());
+            });
+            $("#btn3").click(function () {
+                $("#b3").append(" <b>Appended text</b><br>.");
+            });
+
+            $("#btn4").click(function () {
+                $("ol").append("<li>Appended item</li>");
+            });
+        });
+    </script>
 </body>
 
 </html>

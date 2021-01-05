@@ -4,12 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Session 10</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Practice Session 10
+    </title>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
+    <!-- <h1>Hello World!</h1> -->
     <h2>Hello jquery</h2>
+    <button id="btn1">show P</button>
+    <button id="btn2">Hide P</button>
+    <button id="btn3">Show Divs and add yellow background</button>
+    <div id="div1" style="width: 80px;height: 80px;background-color:blue;display: none;"></div>
+    <div id="div2" style="width: 80px;height: 80px;background-color:red;display: none;"></div>
+    <div id="div3" style="width: 80px;height: 80px;background-color:green;display: none;"></div>
+
+    <p>התחלנו תרגול עם 23 אנשים!!!!!!!!!!!!!!!! יאי</p>
+
+
+    <script>
+        $("document").ready(function () {
+            $("#btn2").click(function () {
+                $("p").fadeOut();
+            });
+            $("#btn1").click(function () {
+                $("p").fadeIn();
+            });
+            $("#btn3").click(function () {
+                $("h2").css("background-color", "yellow");
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(2200);
+            });
+
+        })
+    </script>
+
 </body>
 
 </html>
