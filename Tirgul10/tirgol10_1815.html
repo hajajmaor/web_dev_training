@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Practice Session 10
+    </title>
+</head>
+
+<body>
+
+    <h2>Practice Session 10 - Hello jQuery</h2>
+    <div>
+        <button id="btn1">Hide the paragraph</button>
+        <button id="btn2">Show the paragraph</button>
+        <button id="btn3">Button 3</button>
+    </div><br>
+    <div id="div1" style="width:80px;height:80px;background-color: red;display: none;"></div>
+    <div id="div2" style="width:80px;height:80px;background-color: green;display: none;"></div>
+    <div id="div3" style="width:80px;height:80px;background-color: blue;display: none;"></div>
+
+    <p>This is a paragraph</p>
+    <button id="alertP">Alert p text</button>
+
+    <ol>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ol>
+    <button id="ol-btn1">add to OL</button>
+    <button id="ol-btn2">add to div</button>
+    <div id="closing"></div>
+    <script>
+        //document.getElementById("sda").innerText
+        $(document).ready(function () {
+
+            $("#ol-btn1").click(function () {
+                $("ol").append("<li>Some text</li>");
+            });
+
+            $("#alertP").click(function () {
+                $("p").fadeOut(5000);
+                // alert($("p").text());
+                alert("goodbye:" + $("p").text());
+            });
+            $("#btn1").click(function () {
+                $("p").fadeOut(1000);
+            });
+            $("#btn2").click(function () {
+                $("p").fadeIn(500);
+            });
+            $("#btn3").click(function () {
+                $("h2").css("background-color", "yellow");
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(10000);
+            });
+        });
+    </script>
+</body>
+
+</html>
