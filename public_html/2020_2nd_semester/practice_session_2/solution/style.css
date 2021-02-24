@@ -1,0 +1,49 @@
+p{
+  text-align:left;
+  font-size:10px;
+  font-family:arial;
+}
+h1{
+ color: green; 
+ text-align:center;
+ }
+p.pg{
+  color: brown;
+  text-align:left;
+  font-size:5em;
+  font-family:arial;
+  font-weight: bold;
+  background-image:url("blue.jpg")
+  
+
+
+
+}
+a{
+ color: green; 
+ font-size:10px;
+ font-family:david;
+ }
+ #pf{
+ 
+  text-align:center;
+ 
+  background-color: yellow;
+
+
+}
+table, td, tr {
+   border: 2px solid black;
+   text-align:center;
+}
+th{
+   border: 1px solid blue;
+   font-weight: bold;
+    background-color: pink;
+}
+ol, li{
+ color: purple; 
+ font-size:14px;
+ font-family:Georgia;
+
+}
