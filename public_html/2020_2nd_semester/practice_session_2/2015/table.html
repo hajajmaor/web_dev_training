@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table With Css</title>
+    <style>
+        img {
+            height: 200px;
+            width: 250px;
+        }
+
+        td {
+            font-size: 20px;
+            color: crimson;
+        }
+
+
+
+
+        tr td:nth-child(1) {
+            background-color: blue;
+        }
+
+        td:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <!-- תגיות תיאור -->
+        <th>Name</th>
+        <th>Image</th>
+        <!-- מידע עצמו -->
+
+
+        <tr>
+
+            <td>Lion</td>
+
+            <td>
+                <img
+                    src="https://images.takeshape.io/eec0d9cd-dc81-4ba8-ac20-50da147f43d2/dev/d630aa84-9e25-4afb-8c98-3ce6735fedc5/TLK-PRINT-USE-013_DP_0040_comp_v0703_right_SRGB.1145%20(1).jpg" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>בת יענה</td>
+            <td>
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Ostrich_Struthio_camelus_Tanzania_3740_Nevit.jpg/230px-Ostrich_Struthio_camelus_Tanzania_3740_Nevit.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td>Zebra</td>
+            <td>
+                <img
+                    src="https://images.theconversation.com/files/285143/original/file-20190722-11355-1peled7.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" />
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
