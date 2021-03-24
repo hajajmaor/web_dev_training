@@ -1,0 +1,49 @@
+#maindiv {
+    background-color: beige;
+    height: 500px;
+    width: 800px;
+
+    /* float: left; */
+    align-items: center; 
+    /* display: flex; */
+    display: flex;
+    /* flex-direction: column; */
+    
+    justify-content: space-evenly;
+}
+
+#maindiv>div {
+margin:20px 22px;
+height: 100px;
+width: 100px;
+
+}
+
+#div1 {
+    background-color: red;
+
+}
+
+#div2 {
+    background-color: green;
+
+}
+
+#div3 {
+    background-color: cyan;
+
+}
+
+[id*="id"]{
+float: left;
+}
+#id1{
+    height: 100px;
+    width:50%;
+    background-color:burlywood;
+}
+#id2{
+    height: 100px;
+    width:60%;
+    background-color:tan;
+}
