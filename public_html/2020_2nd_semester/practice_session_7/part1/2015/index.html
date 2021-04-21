@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fruit and vegetable site</title>
+    <style>
+      body {
+        background-color: skyblue;
+      }
+
+      div {
+        border: double 2px green;
+        margin: 3px;
+        padding: 4px;
+      }
+      h4 {
+        color: red;
+        /* background-color: aquamarine; */
+      }
+
+      fieldset {
+        border: double 2px brown;
+        margin: 4px;
+        padding: 4px;
+        background-color: lightgreen;
+      }
+
+      legend {
+        font-size: 17px;
+        color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Welcome to...</h3>
+    <h4>Required fields marked with astrix</h4>
+
+    <form action="sjdkanb.php" method="post">
+      <div>
+        <label for="name">
+          Full Name
+          <input type="text" name="name" />
+        </label>
+      </div>
+
+      <div>
+        <label for="email">
+          email address
+          <input type="email" name="email" placeholder="###@###.###" />
+        </label>
+      </div>
+
+      <div>
+        <label for="phone">
+          phone number
+          <input type="phone" name="phone" placeholder="XXX-XXX-XXXX" />
+        </label>
+      </div>
+
+      <div>
+        <label for="comment">
+          comment
+          <textarea
+            name="comment"
+            cols="40"
+            rows="3"
+            placeholder="Enter long long comment here"
+          ></textarea>
+        </label>
+      </div>
+
+      <div>
+        <label for="product"
+          >product
+          <select name="fruit">
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+          </select>
+          <select name="veg">
+            <option value="nikn">cheese</option>
+            <option value="fgdsfsd">cheese</option>
+            <option value="gfsdfs">cheese</option>
+            <option value="banana">cheese</option>
+            <option value="banana">cheese</option>
+            <option value="banana">grape</option>
+            <option value="banana">grape</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label for="Flavors">
+          flavors
+          <input type="checkbox" name="Flavors" value="cherry" />cherry
+          <input type="checkbox" name="Flavors" value="apple" />apple
+        </label>
+      </div>
+      <fieldset>
+        <legend>how do...</legend>
+        <input type="radio" name="feels" value="love" />love
+        <input type="radio" name="feels" value="hate" />hate
+      </fieldset>
+
+      <input type="submit" value="Send Message" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
