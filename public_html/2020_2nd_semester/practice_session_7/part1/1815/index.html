@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit and vegetable site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h3 id="h3">Welcome to</h3>
+
+    <h4>required fields marked with an astrix</h4>
+
+    <form action="mailto:maorhj@mta.ac.il" method="post">
+      <div>
+        <label for="Name">
+          Name
+          <input type="text" name="Name" />
+        </label>
+      </div>
+
+      <div>
+        <label for="email">
+          email
+          <input type="email" name="userEmail" autocomplete="email" />
+        </label>
+      </div>
+
+      <div>
+        <label for="Comment"
+          >Comment
+          <textarea name="Comment" cols="40" rows="3"> </textarea>
+        </label>
+      </div>
+
+      <div>
+        <label for="product">
+          Pick a product
+
+          <select name="fruit">
+            <option value="Banana">Banana</option>
+            <option value="grapes">grapes</option>
+          </select>
+
+          <select name="veg">
+            <option value="Banana">Banana</option>
+            <option value="grapes" selected>grapes</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <label for="flavors">
+          choose flavors
+
+          <!-- 
+              טעות!!!!!
+    Name = key like the rest
+    value => value of checkbox
+    represent as array
+    key    : value []
+    flavors:[banana,cherry]
+-->
+          <!-- <input type="checkbox" name="cherry" id="cherry" />cherry -->
+          <!-- <input type="checkbox" name="banana" id="banana" />banana -->
+          <input type="checkbox" name="flavors" value="cherry" />cherry
+          <input type="checkbox" name="flavors" value="banana" />banana
+        </label>
+      </div>
+
+      <fieldset>
+        <legend>How do you feel?</legend>
+
+        <input type="radio" name="radio" value="off" />off
+        <input type="radio" name="radio" value="on" />on
+      </fieldset>
+
+      <input type="submit" value="Send Message" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>

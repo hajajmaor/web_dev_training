@@ -1,77 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fruit and vegetable site</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h3>Welcome to the fruit and vegetable form</h3>
     <h4>Required fields are followed by *</h4>
-    <br><br>
+    <br /><br />
     <form action="mailto:test@example.com">
-        <div>
-            <label for="name">Name
-                <input type="text" required=" ">
-                *
-            </label>
-        </div>
-        <div>
-            <label for="email">Email
-                <input type="email" required=" ">
-                *
-            </label>
-        </div>
-        <div>
-            <label for="comment">Comment
-                <textarea rows="3" cols="40"></textarea>
-                <!-- <input type="text"> -->
+      <div>
+        <label for="name"
+          >Name
+          <input type="text" required=" " />
+          *
+        </label>
+      </div>
+      <div>
+        <label for="email"
+          >Email
+          <input type="email" required=" " />
+          *
+        </label>
+      </div>
+      <div>
+        <label for="comment"
+          >Comment
+          <textarea rows="3" cols="40"></textarea>
+          <!-- <input type="text"> -->
+        </label>
+      </div>
+      <div>
+        <label for="products"
+          >Pick a Product
+          <select name="pro1" id="pro1">
+            <optgroup value="vegs">
+              <option value="banana">banana</option>
+              <option value="Cherry">Cherry</option>
+              <option value="apple">apple</option>
+              <option value="orange">orange</option>
+              <option value="Lemon">Lemon</option>
+            </optgroup>
+          </select>
+          <select name="pro2" id="pro2">
+            <optgroup value="fruits">
+              <option value="carrot">carrot</option>
+              <option value="Eggplant">Eggplant</option>
+              <option value="Potato">Potato</option>
+            </optgroup>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label for="flavors"
+          >which flavor do you like?
+          <input type="checkbox" name="cherry" id="cherry" />I like cherry
+          <input type="checkbox" name="banana" id="banana" />I like banana
+        </label>
+      </div>
 
-            </label>
-        </div>
-        <div>
-            <label for="products">Pick a Product
-                <select name="pro1" id="pro1">
-                    <optgroup value="vegs">
-                        <option value="banana">banana</option>
-                        <option value="Cherry">Cherry</option>
-                        <option value="apple">apple</option>
-                        <option value="orange">orange</option>
-                        <option value="Lemon">Lemon</option>
-                    </optgroup>
-                </select>
-                <select name="pro2" id="pro2">
-                    <optgroup value="fruits">
-                        <option value="carrot">carrot</option>
-                        <option value="Eggplant">Eggplant</option>
-                        <option value="Potato">Potato</option>
-                    </optgroup>
-                </select>
-            </label>
-        </div>
-        <div>
-            <label for="flavors">which flavor do you like?
-                <input type="checkbox" name="cherry" id="cherry">I like cherry
-                <input type="checkbox" name="banana" id="banana">I like banana
+      <fieldset>
+        <legend>How do you feel about aspargus?</legend>
+        <input type="radio" name="love" id="love" />I LOVE IT
+        <input type="radio" name="love" id="Meh" />Meh
+        <input type="radio" name="love" id="hate" />I HATE IT
+      </fieldset>
 
-            </label>
-        </div>
-
-        <fieldset>
-            <legend>How do you feel about aspargus?</legend>
-            <input type="radio" name="love" id="love">I LOVE IT
-            <input type="radio" name="love" id="Meh">Meh
-            <input type="radio" name="love" id="hate">I HATE IT
-        </fieldset>
-
-
-
-        <input type="submit" value="Send Message">
-        <input type="reset" value="Reset">
+      <input type="submit" value="Send Message" />
+      <input type="reset" value="Reset" />
     </form>
-</body>
-
+  </body>
 </html>

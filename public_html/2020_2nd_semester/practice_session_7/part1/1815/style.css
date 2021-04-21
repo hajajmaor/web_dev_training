@@ -1,0 +1,21 @@
+body{
+    background-color:skyblue;
+}
+div{
+    border: 2px double green;
+    margin: 3px;
+    padding: 4px;
+}
+fieldset{
+    border: 2px double brown;
+    margin: 4px;
+    padding: 4px;
+    background-color:lightgreen;
+}
+h4{
+    color: red;
+}
+legend{
+    color:magenta;
+    font-size: 17px;
+}
