@@ -1,12 +1,12 @@
 //Ex.1
-// window.alert("Hello world!");
+window.alert("Hello world!");
 
-/*
+
 // Ex.2
-var name = window.prompt("Enter your name:");
-document.write("Hello, " + name);
-*/
-/*
+var userName = window.prompt("Enter your name:");
+document.write("Hello, " + userName);
+
+
 // Ex.3
 var num1 = parseInt(window.prompt("Enter 1st number:"));
 var num2 = parseInt(window.prompt("Enter 2nd number:"));
@@ -31,16 +31,16 @@ switch (operator) {
   default:
     window.alert("Unknown operator");
 }
-*/
-/*
+
+
 // Ex.4
 var i = 1;
 while (i <= 30) {
   document.write(i + ",");
   i++;
 }
-*/
-/*
+
+
 // Ex.5
 var i = 1;
 while (i <= 30) {
@@ -48,8 +48,8 @@ while (i <= 30) {
   document.write(i + "<br>");
   i++;
 }
-*/
-/*
+
+
 //Ex.6
 var counter = 0;
 var sum = 0;
@@ -66,8 +66,8 @@ if (counter != 0) {
 } else {
   document.write("no numbers entered");
 }
-*/
-/*
+
+
 //Ex.7
 var num = parseInt(window.prompt("Enter a number:"));
 const temp = num;
@@ -77,10 +77,8 @@ while (num > 1) {
   num--;
 }
 document.write(temp + "!=" + sum);
-*/
-/*
-// Ex.8
 
+// Ex.8
 var num1 = parseInt(window.prompt("Enter a number:"));
 var num2 = parseInt(window.prompt("Enter a number:"));
 var sum = num1;
@@ -89,4 +87,3 @@ for (var i = 1; i < num2; i++) {
 }
 document.write(num1 + "^" + num2 + "=" + sum + "<br>");
 document.write(num1 + "^" + num2 + "=" + Math.pow(num1, num2));
-*/
