@@ -9,7 +9,90 @@
 </head>
 
 <body>
+    <p id='main_p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae amet cumque
+        laboriosam provident enim
+        nobis culpa
+        sed neque explicabo deserunt molestiae consectetur quibusdam commodi quia aspernatur, saepe rem veritatis
+        similique.</p>
+    <!-- <b>Hello Bold</b> -->
+    <script>
+        function changeP() {
+            /*
+            1. אני מוצא את האלמנט
+            2. משנה אותו
+            */
+            document.getElementById("main_p").innerHTML = "<b>hello world</b>";
+            document.getElementById("main_p").style.color = 'red';
+        }
 
+        function alertMinMax() {
+            alert(`Min: ${Number.MIN_VALUE}, Max: ${Number.MAX_VALUE}`);
+
+            // alert("Min: "+Number.MIN_VALUE+", Max: ${Number.MAX_VALUE}");
+        }
+
+        function ageCalculation() {
+            var name = window.prompt("enter your name:");
+            do {
+                var age = parseFloat(window.prompt("enter your age, bigger then 0:"));
+            } while (age < 0);
+
+            if (age < 1) {
+                document.write("Hello fetus!");
+            } else if (age > 120) {
+                document.write("Hello Methushelach!");
+            } else {
+                document.write(`Hello ${name}, your age in days: ${age*365}`);
+            }
+        }
+
+        function substringSearch() {
+
+
+            var fullstr = "Hello Hello";
+            var sub = "llo";
+            if (!fullstr.includes(sub)) {
+                document.write("substring not found");
+            } else {
+                var counter = 0;
+                do {
+                    /*
+                    1. להעלות את המונה
+                    2. למצוא את האינדקס הבא
+                    3. לחתוך את המחרוזת = נתחיל מהאינדקס שמצאנו + אורך תת המחרוזת עד הסוף
+                    */
+                    // document.write(`${fullstr} => ${counter}<br>`);
+                    var index = fullstr.indexOf(sub);
+                    // document.write(index + "<br>")
+                    counter++;
+                    fullstr = fullstr.substr(index + sub.length);
+
+                } while (fullstr.indexOf(sub) != -1);
+                document.write("counter =", counter);
+            }
+        }
+
+        function arrayBalance() {
+
+
+            var n = parseInt(window.prompt("enter number of vars:"));
+            var nums = [];
+            // n = nums.length;
+            for (let i = 0; i < n; i++)
+                nums.push(parseInt(window.prompt("enter a number:")));
+            var pos = 0;
+            var neg = 0;
+            for (let index = 0; index < nums.length; index++) {
+                num = nums[index];
+                if (num < 0) {
+                    neg++;
+                } else {
+                    pos++;
+                }
+            }
+            document.write(`pos:${pos},neg: ${neg}`);
+        }
+    </script>
 </body>
 
 </html>
