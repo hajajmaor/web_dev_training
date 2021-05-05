@@ -9,7 +9,123 @@
 </head>
 
 <body>
+    <p id="main_p">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam esse sunt non molestias sed doloremque,
+        maiores corporis odit debitis illo labore a fugit odio veniam laborum? Quam incidunt fuga nesciunt!
+    </p>
+    <button onclick="changeP()">
+        ex.1
+    </button>
+    <button onclick="alertMinMax()">
+        ex.2
+    </button>
+    <button onclick="ageCalculation()">
+        ex.3
+    </button>
 
+    <script>
+        function changeP() {
+            var mishtane = document.getElementById("main_p");
+            mishtane.innerHTML = "<b>Hello, world!</b>";
+            mishtane.style.color = "red";
+        }
+
+        function alertMinMax() {
+            window.alert(`number min: ${Number.MIN_VALUE}, Max: ${Number.MAX_VALUE}`);
+        }
+
+        function ageCalculation() {
+            var name = window.prompt("enter you name");
+            do {
+                var age = parseFloat(window.prompt("enter your age"));
+            } while (age < 0);
+
+
+            if (age < 1) {
+                document.write("Hello, fetus");
+            } else if (age > 120) {
+                document.write(`Hello, Methushelach`);
+            } else {
+                document.write(`hello ${name}, age in days : ${age*365}`);
+            }
+        }
+
+
+        function substringSearch() {
+            var fullstr = "hello hello";
+            var substr = "llo"
+            if (!fullstr.includes(substr)) {
+                document.write("substr not found");
+            } else {
+                // substr is in fullstr
+                var counter = 0;
+                /*
+                1. find the index
+                2. counter++
+                3. ---- the original string
+                */
+                var index = fullstr.indexOf(substr);
+                while (index != -1) {
+                    counter++;
+                    index = fullstr.indexOf(substr, index + substr.length);
+                }
+                document.write(`counter : ${counter}`);
+                // 2+3=5
+            }
+        }
+
+        function arrayBalance() {
+            var size = parseInt(window.prompt("please enter array size"));
+            var arr = new Array(size);
+
+            for (var i = 0; i < size; i++) {
+                arr[i] = parseInt(window.prompt("please enter a number"));
+            }
+            var posCount = 0;
+            var negCount = 0;
+            for (var i = 0; i < size; i++) {
+                if (arr[i] < 0) {
+                    negCount++;
+                } else {
+                    posCount++;
+                }
+            }
+            if (posCount == negCount) {
+                document.write("equals");
+            } else if (posCount > negCount) {
+                document.write("more pos");
+            } else {
+                document.write("more neg");
+            }
+
+        }
+
+
+
+
+        function tableCreate() {
+            document.write("<table border=1>");
+            var trs = parseInt(window.prompt("How many rows:", ""));
+            var tds = parseInt(window.prompt("How many cols:", ""));
+            var i = 1,
+                j = 1;
+            while (trs >= i) {
+                document.write("<tr>");
+                while (tds >= j) {
+                    document.write(`<td> ${i*j} </td>`);
+                    j++;
+                }
+                j = 1;
+                document.write("</tr>");
+                i++;
+            }
+            document.write("</table>");
+            document.write(
+                "<style>table{background-color:lightblue;} tr{color:blue;}</style>"
+            );
+        }
+        tableCreate();
+    </script>
 </body>
 
 </html>
