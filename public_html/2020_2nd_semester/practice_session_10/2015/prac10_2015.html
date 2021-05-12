@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+
+    <style>
+        .sq-divs {
+            height: 80px;
+            width: 80px;
+            display: none;
+        }
+
+        .yellow-bg {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Jquery practice session</h2>
+    <button id="btn1">hide the paragraph</button>
+    <button id="btn2">show the paragraph</button>
+    <button id="btn3">btn 3</button>
+
+    <div id="redDiv" class="sq-divs" style="background-color:red;"></div>
+
+    <div id="greenDiv" class="sq-divs" style="background-color:green;"></div>
+
+    <div id="blueDiv" class="sq-divs" style="background-color:blue;"></div>
+
+    <p id="mainP">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime necessitatibus, libero ratione assumenda a hic
+        autem enim, <b>numquam distinctio culpa nobis</b> quod eius? Obcaecati quae assumenda, voluptatum quis est
+        omnis!
+    </p>
+    <button id="alertContent">show content</button>
+
+    <ol>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+
+
+    <button id="addItem">add item</button>
+    <button id="addText">add text</button>
+
+    <div id="divWithSomeText" style="font-size: 50px;"></div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                // document.getElementById("mainP").style.display = 'none';
+                $("#mainP").hide();
+            });
+
+            $("#btn2").click(function () {
+                // document.getElementById("mainP").style.display = 'block';
+                $("#mainP").show();
+            });
+
+            $("#btn3").click(function () {
+                $("#redDiv").fadeIn(1500);
+                $("#greenDiv").fadeIn(100);
+                $("#blueDiv").fadeIn(10000);
+
+                // document.getElementById("mainP").style.backgroundColor = "yellow";
+
+                // $("h2").css("background-color", "yellow")
+                $("h2").addClass("yellow-bg");
+            });
+            $("#alertContent").click(function () {
+                // var text = document.getElementById("mainP").innerText;
+                var text = $("#mainP").text();
+                alert(text);
+            });
+            $("#addItem").click(function () {
+                $("ol").append("<li> new item </li>")
+            });
+
+            $("#addText").click(function () {
+                $("#divWithSomeText").append(" new content <br>")
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
