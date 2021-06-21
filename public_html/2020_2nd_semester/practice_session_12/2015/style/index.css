@@ -1,0 +1,15 @@
+div {
+    height: 100px;
+    float: left;
+    margin: 5px;
+    width: 100px;
+    background-color: red;
+}
+
+div:hover {
+    background-color: rgb(155, 155, 139);
+}
+
+.container {
+    background-color: black;
+}
