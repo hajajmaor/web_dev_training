@@ -1,0 +1,13 @@
+div {
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 10px;
+}
+
+/* div:hover {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+} */
